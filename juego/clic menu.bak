@@ -1,0 +1,20 @@
+(define(inicio tecla)
+  (if(equal?  tecla 'up)
+     (begin((draw-pixmap juego)"imagenes/inicio.gif"(make-posn 0 0))
+     (play-sound "sonidos/inicio.wav" #t))
+     )
+  
+  (if (equal?  tecla 'down)
+      (begin 
+             ((draw-pixmap juego)"imagenes/inicio1.gif"(make-posn 0 0))
+             (play-sound "sonidos/inicio.wav" #t)))
+
+    (if (equal?  tecla 'right)
+      (begin (play-sound "sonidos/acep.wav" #t)
+             (animacionperro 0 50 380)
+             ))
+
+  (inicio (key-value (get-key-press juego) ))
+  )
+
+(inicio 'l)

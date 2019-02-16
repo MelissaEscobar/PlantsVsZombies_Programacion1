@@ -1,0 +1,20 @@
+
+(require(lib "graphics.ss" "graphics"))
+(open-graphics)
+(define escenario ( open-viewport "escenario" 1025 740))
+((draw-pixmap escenario) "escenario.jpg" (make-posn 0 0))
+
+(define (click)
+
+(if (get-mouse-click escenario)
+    (begin
+      (display " x= ")
+      (display (quotient (posn-x (query-mouse-posn escenario)) 100))
+      (display " y= ")
+      (display (quotient (posn-y (query-mouse-posn escenario)) 100))
+      
+      (newline)
+      ))
+  (click))
+
+(click)

@@ -1,0 +1,39 @@
+(require(lib "graphics.ss" "graphics"))
+(open-graphics)
+
+;se dibujan las ventanas y fondos
+
+(define inicio(open-viewport "inicio" 1025 740))
+((draw-pixmap inicio)"inicio.jpg" (make-posn 0 0))
+
+  ( menu (open-viewport "menu" 1025 740))
+  ((draw-pixmap menu)"menu.jpg" (make-posn 0 0))
+
+(define instrucciones (open-viewport "instrucciones" 1025 740))
+((draw-pixmap instrucciones)"instrucciones.jpg" (make-posn 0 0))
+
+(define creditos (open-viewport "creditos" 1025 740))
+((draw-pixmap creditos)"creditos.jpg" (make-posn 0 0))
+
+(define escenario ( open-viewport "escenario" 1025 740))
+((draw-pixmap escenario) "escenario.jpg" (make-posn 0 0))
+
+;se dibujan los personajes
+;plantas
+(((draw-pixmap-posn "pea.png") escenario)(make-posn 145 200))
+(((draw-pixmap-posn "sunflower.png") escenario)(make-posn 145 345))
+(((draw-pixmap-posn "snow_pea.png") escenario)(make-posn 145 455))
+(((draw-pixmap-posn "wallnut.png") escenario)(make-posn 145 100))
+(((draw-pixmap-posn "chewrrybomb.png") escenario)(make-posn 145 600))
+(((draw-pixmap-posn "sol.png") escenario)(make-posn 500 440))
+
+;zombies
+
+(((draw-pixmap-posn  "zombie1.png") escenario)(make-posn 600 440))
+(((draw-pixmap-posn "zombie2.png")escenario)(make-posn 700 300))
+(((draw-pixmap-posn "zombie3.png") escenario)(make-posn 800 560))
+(((draw-pixmap-posn "zombie4.png")escenario)(make-posn 450 180))
+(((draw-pixmap-posn "zombie7.png" )escenario)(make-posn 800 180))
+
+
+

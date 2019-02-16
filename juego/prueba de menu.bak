@@ -1,0 +1,4 @@
+(require(lib "graphics.ss" "graphics"))
+(open-graphics)
+(define ventana(open-viewport "ventana" 1025 768))
+((draw-pixmap ventana)"inicio.jpg" (make-posn 0 0))
